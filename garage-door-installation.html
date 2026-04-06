@@ -11,6 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gilbertgaragedoorpro.com/garage-door-installation.html">
   <meta property="og:image" content="https://gilbertgaragedoorpro.com/images/installation_hero.jpg">
+  <link rel="preload" as="image" href="images/installation_hero.jpg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -295,6 +296,45 @@
           <p>Yes. Full removal and disposal of your old garage door and hardware is included in every installation. We handle everything from tear-down to cleanup — you won't be left managing old panels or hardware. The only thing we leave behind is your new door, tested and ready to use.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="content-section" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2>Request a Free Installation Estimate</h2>
+      <form class="contact-form" action="#" method="POST">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="">Select a Service</option>
+            <option value="garage-door-repair">Garage Door Repair</option>
+            <option value="opener-repair">Opener Repair</option>
+            <option value="spring-repair">Spring Repair</option>
+            <option value="installation" selected>Installation</option>
+            <option value="emergency-repair">Emergency Repair</option>
+            <option value="sensor-repair">Sensor Repair</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your project — new door, opener, or both? Any style preferences or size details?"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Request</button>
+      </form>
     </div>
   </section>
 
