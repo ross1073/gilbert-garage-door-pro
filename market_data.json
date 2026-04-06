@@ -1,0 +1,423 @@
+{
+  "location": "Gilbert, AZ",
+  "city": "Gilbert",
+  "state": "AZ",
+  "niche": "garage door repair",
+  "population": 267918,
+  "viability_score": 11,
+  "viability_verdict": "Excellent",
+  "total_keywords": 50,
+  "total_local_volume": 910,
+  "avg_cpc": 47.65,
+  "traffic_value": 353701.5,
+  "revenue_estimate_monthly": 26008.15,
+  "total_ppc_ads": 4,
+  "total_lsa_ads": 0,
+  "top_keywords": [
+    {
+      "keyword": "garage door repair liftmaster",
+      "local_volume": 40,
+      "cpc": 50.56,
+      "intent": "transactional",
+      "difficulty": 18
+    },
+    {
+      "keyword": "repair liftmaster garage door opener",
+      "local_volume": 40,
+      "cpc": 50.56,
+      "intent": "transactional",
+      "difficulty": 0
+    },
+    {
+      "keyword": "liftmaster garage door opener repair",
+      "local_volume": 40,
+      "cpc": 50.56,
+      "intent": "transactional",
+      "difficulty": 10
+    },
+    {
+      "keyword": "garage door liftmaster repair",
+      "local_volume": 40,
+      "cpc": 50.56,
+      "intent": "transactional",
+      "difficulty": 8
+    },
+    {
+      "keyword": "garage door opener repair liftmaster",
+      "local_volume": 40,
+      "cpc": 50.56,
+      "intent": "transactional",
+      "difficulty": 10
+    },
+    {
+      "keyword": "liftmaster garage door openers repair",
+      "local_volume": 40,
+      "cpc": 50.56,
+      "intent": "transactional",
+      "difficulty": 10
+    },
+    {
+      "keyword": "liftmaster garage door repair",
+      "local_volume": 40,
+      "cpc": 50.56,
+      "intent": "navigational",
+      "difficulty": 21
+    },
+    {
+      "keyword": "repair garage door openers",
+      "local_volume": 210,
+      "cpc": 40.85,
+      "intent": "commercial",
+      "difficulty": 32
+    },
+    {
+      "keyword": "garage door open repair",
+      "local_volume": 210,
+      "cpc": 40.85,
+      "intent": "navigational",
+      "difficulty": 36
+    },
+    {
+      "keyword": "garage door opener repair",
+      "local_volume": 210,
+      "cpc": 40.85,
+      "intent": "transactional",
+      "difficulty": 10
+    }
+  ],
+  "related_niches": [
+    {
+      "keyword": "garage door repairs near me",
+      "search_volume": 201000,
+      "cpc": 43.69
+    },
+    {
+      "keyword": "garage door repair cost",
+      "search_volume": 6600,
+      "cpc": 23.46
+    },
+    {
+      "keyword": "residential garage door repair",
+      "search_volume": 880,
+      "cpc": 47.15
+    },
+    {
+      "keyword": "affordable garage door repair near me",
+      "search_volume": 720,
+      "cpc": 29.74
+    },
+    {
+      "keyword": "garage door repair kit",
+      "search_volume": 590,
+      "cpc": 0.61
+    },
+    {
+      "keyword": "garage door repair near me within 20 mi",
+      "search_volume": 170,
+      "cpc": 24.69
+    },
+    {
+      "keyword": "garage door repair near california",
+      "search_volume": 0,
+      "cpc": 0
+    },
+    {
+      "keyword": "garage door repair near texas",
+      "search_volume": 0,
+      "cpc": 0
+    }
+  ],
+  "competitors": {
+    "repair garage door near me": [
+      {
+        "domain": "www.yelp.com",
+        "position": 0,
+        "title": "TOP 10 BEST Garage Door Repair in Gilbert, AZ"
+      },
+      {
+        "domain": "jacobgaragedoorrepairgilbert.com",
+        "position": 0,
+        "title": "Gilbert Garage Door Repair (Fast Same Day Service)"
+      },
+      {
+        "domain": "4sonsgaragedoor.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert AZ | Installations & Service"
+      },
+      {
+        "domain": "bluefoxgaragedoors.com",
+        "position": 0,
+        "title": "Blue Fox Garage Doors | Garage Door Repair & Installation ..."
+      },
+      {
+        "domain": "a1garage.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert AZ"
+      },
+      {
+        "domain": "garagedoorsatchandler.com",
+        "position": 0,
+        "title": "Superior Gilbert Garage Door Repair"
+      },
+      {
+        "domain": "goodygaragedoors.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert, AZ"
+      },
+      {
+        "domain": "mastercraftgaragedoorservice.com",
+        "position": 0,
+        "title": "Affordable Garage Door Repair & Install Gilbert AZ ... - Mesa"
+      },
+      {
+        "domain": "homeguide.com",
+        "position": 0,
+        "title": "The 10 Best Garage Door Installers in Gilbert, AZ (2026)"
+      },
+      {
+        "domain": "samedaygaragedoorservices.com",
+        "position": 0,
+        "title": "Same Day Garage Door Services | Fast, Reliable Garage ..."
+      },
+      {
+        "domain": "cactusgaragedooraz.com",
+        "position": 0,
+        "title": "Gilbert Garage Door Repair"
+      },
+      {
+        "domain": "www.garagedoorrepairsgilbert.com",
+        "position": 0,
+        "title": "Garage Door Repairs Gilbert - Gilbert, AZ"
+      },
+      {
+        "domain": "www.clopaydoor.com",
+        "position": 0,
+        "title": "Find Garage Doors in Gilbert, AZ | Clopay®"
+      },
+      {
+        "domain": "www.gilbertgaragerepair.com",
+        "position": 0,
+        "title": "Garage Door Repair - Gilbert"
+      },
+      {
+        "domain": "kaisergarage.com",
+        "position": 0,
+        "title": "5 Star Garage Door Repair & Sales Co. in Gilbert, AZ"
+      },
+      {
+        "domain": "garagedoorgrunts.com",
+        "position": 0,
+        "title": "Garage Door Repair & Service in Gilbert AZ"
+      },
+      {
+        "domain": "coyotegaragedoors.com",
+        "position": 0,
+        "title": "Coyote Garage Doors - Best Garage Door Repair Service in ..."
+      },
+      {
+        "domain": "gilbertazgaragedoor.com",
+        "position": 0,
+        "title": "Gilbert AZ Garage Door | Repair And Installation"
+      },
+      {
+        "domain": "www.localprobook.com",
+        "position": 0,
+        "title": "Garage Door Companies Near Me - Gilbert, AZ"
+      }
+    ],
+    "near me garage door repair": [
+      {
+        "domain": "www.yelp.com",
+        "position": 0,
+        "title": "TOP 10 BEST Garage Door Repair in Gilbert, AZ"
+      },
+      {
+        "domain": "jacobgaragedoorrepairgilbert.com",
+        "position": 0,
+        "title": "Gilbert Garage Door Repair (Fast Same Day Service)"
+      },
+      {
+        "domain": "4sonsgaragedoor.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert AZ | Installations & Service"
+      },
+      {
+        "domain": "a1garage.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert AZ"
+      },
+      {
+        "domain": "bluefoxgaragedoors.com",
+        "position": 0,
+        "title": "Blue Fox Garage Doors | Garage Door Repair & Installation ..."
+      },
+      {
+        "domain": "garagedoorsatchandler.com",
+        "position": 0,
+        "title": "Superior Gilbert Garage Door Repair"
+      },
+      {
+        "domain": "mastercraftgaragedoorservice.com",
+        "position": 0,
+        "title": "Affordable Garage Door Repair & Install Gilbert AZ ... - Mesa"
+      },
+      {
+        "domain": "samedaygaragedoorservices.com",
+        "position": 0,
+        "title": "Same Day Garage Door Services | Fast, Reliable Garage ..."
+      },
+      {
+        "domain": "homeguide.com",
+        "position": 0,
+        "title": "The 10 Best Garage Door Installers in Gilbert, AZ (2026)"
+      },
+      {
+        "domain": "coyotegaragedoors.com",
+        "position": 0,
+        "title": "Coyote Garage Doors - Best Garage Door Repair Service in ..."
+      },
+      {
+        "domain": "www.gilbertgaragerepair.com",
+        "position": 0,
+        "title": "Garage Door Repair - Gilbert"
+      },
+      {
+        "domain": "bluefoxgaragedoors.com",
+        "position": 0,
+        "title": "Blue Fox Garage Doors | Garage Door Repair & Installation ..."
+      },
+      {
+        "domain": "gilbertazgaragedoor.com",
+        "position": 0,
+        "title": "Gilbert AZ Garage Door | Repair And Installation"
+      },
+      {
+        "domain": "garagedoorsatchandler.com",
+        "position": 0,
+        "title": "Superior Gilbert Garage Door Repair"
+      },
+      {
+        "domain": "www.garagedoorrepairgilbertaz.com",
+        "position": 0,
+        "title": "Gilbert's Premier Garage Door Repair Service"
+      },
+      {
+        "domain": "jacobgaragedoorrepairgilbert.com",
+        "position": 0,
+        "title": "Garage Door Repair Services in Gilbert"
+      },
+      {
+        "domain": "www.gilbertgaragedoorrepair.us",
+        "position": 0,
+        "title": "Same Day Garage Door Repair in Gilbert, Arizona"
+      },
+      {
+        "domain": "www.clopaydoor.com",
+        "position": 0,
+        "title": "Find Garage Doors in Gilbert, AZ | Clopay®"
+      },
+      {
+        "domain": "www.gilbertgaragerepair.com",
+        "position": 0,
+        "title": "Residential garage door repair gilbert"
+      }
+    ],
+    "garage door repair near me": [
+      {
+        "domain": "www.yelp.com",
+        "position": 0,
+        "title": "TOP 10 BEST Garage Door Services in Gilbert, AZ"
+      },
+      {
+        "domain": "jacobgaragedoorrepairgilbert.com",
+        "position": 0,
+        "title": "Gilbert Garage Door Repair (Fast Same Day Service)"
+      },
+      {
+        "domain": "kaisergarage.com",
+        "position": 0,
+        "title": "5 Star Garage Door Repair & Sales Co. in Gilbert, AZ"
+      },
+      {
+        "domain": "4sonsgaragedoor.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert AZ | Installations & Service"
+      },
+      {
+        "domain": "a1garage.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert AZ"
+      },
+      {
+        "domain": "garagedoorgrunts.com",
+        "position": 0,
+        "title": "Garage Door Repair & Service in Gilbert AZ"
+      },
+      {
+        "domain": "localgaragesolutions.com",
+        "position": 0,
+        "title": "Garage Door Repair & Installation in Gilbert, AZ"
+      },
+      {
+        "domain": "bluefoxgaragedoors.com",
+        "position": 0,
+        "title": "Blue Fox Garage Doors | Garage Door Repair & Installation ..."
+      },
+      {
+        "domain": "mastercraftgaragedoorservice.com",
+        "position": 0,
+        "title": "Affordable Garage Door Repair & Install Gilbert AZ ... - Mesa"
+      },
+      {
+        "domain": "www.gilbertgaragerepair.com",
+        "position": 0,
+        "title": "Garage Door Repair - Gilbert"
+      },
+      {
+        "domain": "www.garagedoorrepairsgilbert.com",
+        "position": 0,
+        "title": "Garage Door Repairs Gilbert - Gilbert, AZ"
+      },
+      {
+        "domain": "www.garagedoorgilbert.com",
+        "position": 0,
+        "title": "Garage Door Gilbert - Gilbert, AZ"
+      },
+      {
+        "domain": "coyotegaragedoors.com",
+        "position": 0,
+        "title": "Coyote Garage Doors - Best Garage Door Repair Service in ..."
+      },
+      {
+        "domain": "www.garagedoorrepairqueencreek-az.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert AZ - (480) 210-1732 - Affordable!"
+      },
+      {
+        "domain": "www.garagedoor-repairmesaaz.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert AZ - (602) 782-3564"
+      },
+      {
+        "domain": "garagedoorrepairqueencreekaz.com",
+        "position": 0,
+        "title": "Garage Door Repair Gilbert AZ - (480) 210-4305 - Affordable!"
+      },
+      {
+        "domain": "gilbertazgaragedoor.com",
+        "position": 0,
+        "title": "Gilbert AZ Garage Door | Repair And Installation"
+      },
+      {
+        "domain": "www.callriteaway.com",
+        "position": 0,
+        "title": "The trusted garage door team serving Gilbert, AZ"
+      },
+      {
+        "domain": "www.garagedoor-repair-gilbert-az.com",
+        "position": 0,
+        "title": "Garage Door Installation Gilbert AZ - (602) 704-5756"
+      }
+    ]
+  }
+}
