@@ -124,10 +124,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 16px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  gap: 24px;
+  gap: 0 24px;
 }
 
 /* Logo — HTML uses <a class="logo"> */
@@ -167,8 +168,9 @@ button {
   flex-shrink: 0;
 }
 
-/* Header CTA button — uses .btn-primary, override sizing for header */
+/* Header CTA button — hidden on mobile (mobile-cta bar handles it), shown on desktop */
 .header-cta.btn-primary {
+  display: none;
   font-size: 13px;
   padding: 12px 24px;
   border-radius: 30px;
@@ -229,7 +231,8 @@ body.nav-open .menu-toggle span:nth-child(3) {
 .nav-menu.nav-open {
   display: flex;
   flex-direction: column;
-  padding: 16px 20px;
+  flex-basis: 100%;
+  padding: 16px 0;
 }
 
 .nav-menu a {
@@ -374,6 +377,10 @@ body.nav-open .menu-toggle span:nth-child(3) {
 
   .header-phone {
     display: none;
+  }
+
+  .header-cta.btn-primary {
+    display: inline-block;
   }
 }
 
