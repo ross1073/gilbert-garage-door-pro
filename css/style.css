@@ -131,12 +131,19 @@ button {
 
 /* Logo — HTML uses <a class="logo"> */
 .logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
   color: var(--white);
   font-size: 20px;
   font-weight: 700;
-  text-decoration: none;
   white-space: nowrap;
-  flex-shrink: 0;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
 }
 
 .logo span {
@@ -647,7 +654,11 @@ body.nav-open .menu-toggle span:nth-child(3) {
 }
 
 .faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+  gap: 12px;
   text-align: left;
   background: none;
   border: none;
@@ -656,12 +667,23 @@ body.nav-open .menu-toggle span:nth-child(3) {
   font-weight: 600;
   color: var(--charcoal);
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
   font-family: var(--font-stack);
   transition: color 0.2s ease;
+}
+
+.faq-question span {
+  flex: 1;
+  text-align: left;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: var(--orange);
+}
+
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
 }
 
 .faq-question:hover {
@@ -898,6 +920,23 @@ body.nav-open .menu-toggle span:nth-child(3) {
 .footer-col ul li a:hover {
   color: var(--orange);
   opacity: 1;
+}
+
+.footer-legal {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.footer-legal a:hover {
+  opacity: 1;
+  color: var(--orange);
 }
 
 .footer-bottom {
@@ -1371,6 +1410,166 @@ body {
   margin: 0 auto;
   display: block;
   opacity: 0.7;
+}
+
+/* ------------------------------------------------------------
+   26. Map Embed
+   ------------------------------------------------------------ */
+.map-embed {
+  margin-top: 30px;
+}
+
+.map-embed iframe {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ------------------------------------------------------------
+   27. Disclaimer Box
+   ------------------------------------------------------------ */
+.disclaimer-box {
+  background-color: #fff8e1;
+  border-left: 4px solid #f59e0b;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.disclaimer-box strong {
+  color: var(--charcoal);
+}
+
+/* ------------------------------------------------------------
+   28. Legal Pages & Thank You Page
+   ------------------------------------------------------------ */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.legal-content h1 {
+  font-size: 2rem;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.legal-content .effective-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.legal-content h2 {
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.legal-content p {
+  margin-bottom: 16px;
+  color: var(--body-text);
+  line-height: 1.7;
+}
+
+.legal-content ul {
+  margin: 0 0 16px 24px;
+  line-height: 1.7;
+}
+
+.legal-content ul li {
+  margin-bottom: 6px;
+}
+
+.legal-content .marketing-disclosure {
+  background-color: #fff8e1;
+  border-left: 4px solid #f59e0b;
+  padding: 20px 24px;
+  margin: 28px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.legal-content .marketing-disclosure strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--charcoal);
+  font-size: 16px;
+}
+
+/* Thank You page */
+.thankyou-content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 64px 0 100px;
+  text-align: center;
+}
+
+.thankyou-content h1 {
+  font-size: 2.5rem;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.thankyou-content .thankyou-intro {
+  font-size: 1.1rem;
+  color: var(--body-text);
+  margin-bottom: 8px;
+}
+
+.thankyou-content .thankyou-response-time {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 36px;
+}
+
+.thankyou-content .call-cta {
+  margin: 32px 0;
+}
+
+.thankyou-content .call-cta p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.thankyou-steps {
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 40px 0;
+  text-align: left;
+}
+
+.thankyou-steps h2 {
+  font-size: 1.2rem;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.thankyou-steps ol {
+  padding-left: 20px;
+}
+
+.thankyou-steps ol li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: var(--body-text);
+}
+
+.thankyou-back {
+  margin-top: 32px;
+  font-size: 14px;
+}
+
+.thankyou-back a {
+  color: var(--orange);
+  text-decoration: underline;
 }
 
 /* ------------------------------------------------------------
