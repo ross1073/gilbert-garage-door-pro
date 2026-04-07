@@ -135,17 +135,28 @@ button {
 .logo {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
   text-decoration: none;
   color: var(--white);
   font-size: 20px;
   font-weight: 700;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .logo img {
-  height: 50px;
+  height: 36px;
   width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left;
+}
+
+@media (min-width: 1024px) {
+  .logo img {
+    height: 50px;
+  }
 }
 
 .logo span {
