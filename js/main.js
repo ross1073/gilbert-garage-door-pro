@@ -24,7 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // 3. Sticky header shadow on scroll
+  // 3. Nav dropdown toggle (mobile)
+  var dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+  dropdownToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var dropdown = toggle.closest('.nav-dropdown');
+      dropdown.classList.toggle('open');
+    });
+  });
+
+  // 4. Sticky header shadow on scroll
   var header = document.querySelector('.site-header');
   if (header) {
     window.addEventListener('scroll', function() {
