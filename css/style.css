@@ -1720,5 +1720,48 @@ body {
 }
 
 /* ------------------------------------------------------------
+   Form Checkbox & Success Styles
+   ------------------------------------------------------------ */
+.form__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #666;
+}
+
+.form__checkbox input[type="checkbox"] {
+  width: auto;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.form__checkbox label {
+  font-size: 12px;
+  font-weight: 400;
+  color: #666;
+}
+
+.form__checkbox a {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+.form__success {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  color: var(--green);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.field--error {
+  border-color: #ef4444 !important;
+}
+
+/* ------------------------------------------------------------
    End of stylesheet
    ------------------------------------------------------------ */
