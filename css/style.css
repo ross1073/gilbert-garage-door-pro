@@ -124,9 +124,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 20px;
-  max-width: 1200px;
+  padding: 16px 20px;
+  max-width: 1400px;
   margin: 0 auto;
+  gap: 24px;
 }
 
 /* Logo — HTML uses <a class="logo"> */
@@ -142,7 +143,7 @@ button {
 }
 
 .logo img {
-  height: 40px;
+  height: 50px;
   width: auto;
 }
 
@@ -155,7 +156,7 @@ button {
   display: none;
 }
 
-/* Phone — hidden on mobile */
+/* Phone — hidden on mobile, shown on desktop */
 .header-phone {
   display: none;
   color: var(--white);
@@ -163,13 +164,16 @@ button {
   text-decoration: none;
   font-size: 15px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Header CTA button — uses .btn-primary, override sizing for header */
 .header-cta.btn-primary {
-  font-size: 14px;
-  padding: 10px 20px;
-  border-radius: 6px;
+  font-size: 13px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Menu toggle — visible on mobile only */
@@ -247,8 +251,8 @@ body.nav-open .menu-toggle span:nth-child(3) {
   color: var(--orange);
 }
 
-/* >=768px: Show desktop nav, phone; hide menu toggle */
-@media (min-width: 768px) {
+/* >=1024px: Show desktop nav, phone; hide menu toggle */
+@media (min-width: 1024px) {
   .menu-toggle {
     display: none;
   }
@@ -258,18 +262,21 @@ body.nav-open .menu-toggle span:nth-child(3) {
     width: auto;
     background: none;
     align-items: center;
-    gap: 4px;
+    gap: 0;
     padding: 0;
+    flex: 1;
+    justify-content: center;
   }
 
   .nav-menu a {
     color: rgba(255, 255, 255, 0.85);
     font-size: 14px;
     font-weight: 500;
-    padding: 8px 12px;
+    padding: 8px 14px;
     border-bottom: none;
     border-radius: 4px;
     transition: color 0.2s ease, background-color 0.2s ease;
+    white-space: nowrap;
   }
 
   .nav-menu a:hover {
@@ -277,6 +284,13 @@ body.nav-open .menu-toggle span:nth-child(3) {
     background-color: rgba(255, 255, 255, 0.08);
   }
 
+  .header-phone {
+    display: none;
+  }
+}
+
+/* Only show separate phone text on very wide screens */
+@media (min-width: 1280px) {
   .header-phone {
     display: block;
   }
