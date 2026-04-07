@@ -9,11 +9,11 @@
 :root {
   --charcoal: #1a1a2e;
   --navy: #16213e;
-  --orange: #e94560;
-  --orange-hover: #d63851;
+  --orange: #e87a2e;
+  --orange-hover: #d46a1e;
   --white: #ffffff;
   --body-text: #333333;
-  --light-gray: #f5f5f5;
+  --light-gray: #f0f2f5;
   --green: #22c55e;
   --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
@@ -403,6 +403,10 @@ body.nav-open .menu-toggle span:nth-child(3) {
 .content-section {
   background-color: var(--white);
   padding: 60px 0;
+}
+
+.content-section.alt-bg {
+  background-color: var(--light-gray);
 }
 
 .content-section h2 {
