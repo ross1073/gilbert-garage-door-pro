@@ -1264,5 +1264,115 @@ body {
 }
 
 /* ------------------------------------------------------------
+   23. Hero Split (form in hero)
+   ------------------------------------------------------------ */
+.hero-split {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-form {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.hero-form h3 {
+  color: var(--charcoal);
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.hero-form .contact-form input,
+.hero-form .contact-form select,
+.hero-form .contact-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: var(--font-stack);
+}
+
+.hero-form .contact-form textarea {
+  resize: vertical;
+}
+
+.hero-form .contact-form .btn-primary {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-stack);
+}
+
+.hero-form .contact-form {
+  max-width: none;
+  padding: 0;
+  box-shadow: none;
+  background: none;
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .hero-split {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-form {
+    flex-shrink: 0;
+  }
+}
+
+/* ------------------------------------------------------------
+   24. Service Card Images
+   ------------------------------------------------------------ */
+.service-card img {
+  width: calc(100% + 48px);
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin: -24px -24px 16px -24px;
+}
+
+/* ------------------------------------------------------------
+   25. Brands Bar
+   ------------------------------------------------------------ */
+.brands-bar {
+  background: var(--white);
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.brands-label {
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.brands-bar img {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.7;
+}
+
+/* ------------------------------------------------------------
    End of stylesheet
    ------------------------------------------------------------ */

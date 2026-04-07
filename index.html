@@ -47,9 +47,33 @@
   <section class="hero" style="background-image: url('images/home_hero.jpg');">
     <div class="hero-overlay">
       <div class="container">
-        <h1>Garage Door Repair in Gilbert, AZ</h1>
-        <p class="hero-subtitle">Fast, reliable service from Gilbert's trusted garage door experts. Available 24/7 for emergencies.</p>
-        <a href="tel:+14805550199" class="btn-primary">Call Now for Same-Day Service</a>
+        <div class="hero-split">
+          <div class="hero-text">
+            <h1>Garage Door Repair in Gilbert, AZ</h1>
+            <p class="hero-subtitle">Fast, reliable service from Gilbert's trusted garage door experts. Available 24/7 for emergencies.</p>
+            <a href="tel:+14805550199" class="btn-primary">Call Now for Same-Day Service</a>
+          </div>
+          <div class="hero-form">
+            <h3>Get a Free Estimate</h3>
+            <form class="contact-form" action="#" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="tel" name="phone" placeholder="Phone Number" required>
+              <input type="email" name="email" placeholder="Email (optional)">
+              <select name="service">
+                <option value="">Select a Service</option>
+                <option value="repair">Garage Door Repair</option>
+                <option value="opener">Opener Repair</option>
+                <option value="spring">Spring Repair</option>
+                <option value="installation">Installation</option>
+                <option value="emergency">Emergency Repair</option>
+                <option value="sensor">Sensor Repair</option>
+                <option value="other">Other</option>
+              </select>
+              <textarea name="message" placeholder="Describe your issue..." rows="3"></textarea>
+              <button type="submit" class="btn-primary">Send Request</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -102,36 +126,64 @@
       <h2>Our Garage Door Services</h2>
       <div class="services-grid">
         <div class="service-card">
+          <picture>
+            <source srcset="images/webp/card_opener.webp" type="image/webp">
+            <img src="images/card_opener.jpg" alt="Garage door opener repair" width="800" height="597" loading="lazy">
+          </picture>
           <h3>Opener Repair</h3>
           <p>Motor failures, remote issues, gear problems, and wall button malfunctions. We fix all opener brands.</p>
           <a href="garage-door-opener-repair.html">Learn More &rarr;</a>
         </div>
         <div class="service-card">
+          <picture>
+            <source srcset="images/webp/card_spring.webp" type="image/webp">
+            <img src="images/card_spring.jpg" alt="Garage door spring repair" width="800" height="597" loading="lazy">
+          </picture>
           <h3>Spring Repair</h3>
           <p>Broken torsion or extension springs replaced safely and quickly. Don't risk a DIY repair.</p>
           <a href="garage-door-spring-repair.html">Learn More &rarr;</a>
         </div>
         <div class="service-card">
+          <picture>
+            <source srcset="images/webp/card_liftmaster.webp" type="image/webp">
+            <img src="images/card_liftmaster.jpg" alt="LiftMaster garage door opener repair" width="800" height="597" loading="lazy">
+          </picture>
           <h3>LiftMaster Repair</h3>
           <p>Specialized service for all LiftMaster models including myQ smart openers and belt drives.</p>
           <a href="liftmaster-garage-door-repair.html">Learn More &rarr;</a>
         </div>
         <div class="service-card">
+          <picture>
+            <source srcset="images/webp/card_installation.webp" type="image/webp">
+            <img src="images/card_installation.jpg" alt="Garage door installation" width="800" height="597" loading="lazy">
+          </picture>
           <h3>Installation</h3>
           <p>New garage doors and opener installations. Upgrade your home's curb appeal and security.</p>
           <a href="garage-door-installation.html">Learn More &rarr;</a>
         </div>
         <div class="service-card">
+          <picture>
+            <source srcset="images/webp/card_emergency.webp" type="image/webp">
+            <img src="images/card_emergency.jpg" alt="Emergency garage door repair" width="800" height="597" loading="lazy">
+          </picture>
           <h3>Emergency Repair</h3>
           <p>Garage door stuck open? Car trapped inside? We're available 24/7 for urgent repairs.</p>
           <a href="emergency-garage-door-repair.html">Learn More &rarr;</a>
         </div>
         <div class="service-card">
+          <picture>
+            <source srcset="images/webp/card_sensor.webp" type="image/webp">
+            <img src="images/card_sensor.jpg" alt="Garage door sensor repair" width="800" height="597" loading="lazy">
+          </picture>
           <h3>Sensor Repair</h3>
           <p>Blinking lights, misaligned sensors, and safety reverse problems fixed fast.</p>
           <a href="garage-door-sensor-repair.html">Learn More &rarr;</a>
         </div>
         <div class="service-card">
+          <picture>
+            <source srcset="images/webp/card_cost.webp" type="image/webp">
+            <img src="images/card_cost.jpg" alt="Garage door repair cost guide" width="800" height="597" loading="lazy">
+          </picture>
           <h3>Cost Guide</h3>
           <p>Wondering what garage door repair costs in Gilbert? See our 2026 pricing guide for transparent estimates.</p>
           <a href="garage-door-repair-cost.html">Learn More &rarr;</a>
@@ -317,45 +369,6 @@
     </div>
   </section>
 
-  <!-- Contact Form -->
-  <section class="content-section" style="background-color: #f8f9fa;">
-    <div class="container">
-      <h2>Request a Free Estimate</h2>
-      <form class="contact-form" action="#" method="POST">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email">
-        </div>
-        <div>
-          <label for="service">Service Needed</label>
-          <select id="service" name="service">
-            <option value="">Select a Service</option>
-            <option value="garage-door-repair">Garage Door Repair</option>
-            <option value="opener-repair">Opener Repair</option>
-            <option value="spring-repair">Spring Repair</option>
-            <option value="installation">Installation</option>
-            <option value="emergency-repair">Emergency Repair</option>
-            <option value="sensor-repair">Sensor Repair</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn-primary">Send Request</button>
-      </form>
-    </div>
-  </section>
-
   <!-- CTA Band -->
   <section class="cta-band">
     <div class="container">
@@ -371,8 +384,8 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a href="/"><picture>
-            <source srcset="images/webp/logo_stacked.webp" type="image/webp">
-            <img src="images/logo_stacked.jpg" alt="Gilbert Garage Door Pro" width="200" height="200" loading="lazy" style="margin-bottom: 16px;">
+            <source srcset="images/webp/logo_stacked_white.webp" type="image/webp">
+            <img src="images/logo_stacked_white.jpg" alt="Gilbert Garage Door Pro" width="200" height="200" loading="lazy" style="margin-bottom: 16px;">
           </picture></a>
           <p>Professional garage door repair and installation serving Gilbert, AZ and the East Valley. Licensed, insured, and available 24/7 for emergencies.</p>
           <p><a href="tel:+14805550199">(480) 555-0199</a></p>
