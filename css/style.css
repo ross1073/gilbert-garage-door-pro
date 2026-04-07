@@ -77,6 +77,35 @@ button {
 }
 
 /* ------------------------------------------------------------
+   3b. General .btn-primary (orange CTA button)
+   ------------------------------------------------------------ */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-stack);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--orange-hover);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------
    4. Sticky Header
    ------------------------------------------------------------ */
 .site-header {
@@ -100,8 +129,8 @@ button {
   margin: 0 auto;
 }
 
-/* Logo */
-.site-logo {
+/* Logo — HTML uses <a class="logo"> */
+.logo {
   color: var(--white);
   font-size: 20px;
   font-weight: 700;
@@ -110,11 +139,11 @@ button {
   flex-shrink: 0;
 }
 
-.site-logo span {
+.logo span {
   color: var(--orange);
 }
 
-/* Desktop nav — hidden on mobile, shown ≥768px */
+/* Desktop nav — hidden on mobile, shown >=768px */
 .nav-menu {
   display: none;
 }
@@ -129,32 +158,11 @@ button {
   white-space: nowrap;
 }
 
-/* Header CTA button */
-.header-cta {
-  display: inline-block;
-  background-color: var(--orange);
-  color: var(--white);
+/* Header CTA button — uses .btn-primary, override sizing for header */
+.header-cta.btn-primary {
   font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   padding: 10px 20px;
   border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  white-space: nowrap;
-}
-
-.header-cta:hover {
-  background-color: var(--orange-hover);
-  transform: translateY(-1px);
-}
-
-/* Header right group */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
 }
 
 /* Menu toggle — visible on mobile only */
@@ -173,7 +181,8 @@ button {
   flex-shrink: 0;
 }
 
-.menu-toggle .bar {
+/* HTML uses <span> inside .menu-toggle (no .bar class) */
+.menu-toggle span {
   display: block;
   width: 24px;
   height: 2px;
@@ -183,20 +192,22 @@ button {
 }
 
 /* Animate hamburger to X when nav-open */
-body.nav-open .menu-toggle .bar:nth-child(1) {
+body.nav-open .menu-toggle span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
 
-body.nav-open .menu-toggle .bar:nth-child(2) {
+body.nav-open .menu-toggle span:nth-child(2) {
   opacity: 0;
 }
 
-body.nav-open .menu-toggle .bar:nth-child(3) {
+body.nav-open .menu-toggle span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ------------------------------------------------------------
    5. Mobile Nav
+   HTML structure: <nav class="nav-menu"><a>...</a><a>...</a></nav>
+   (bare anchor tags, no ul/li)
    ------------------------------------------------------------ */
 .nav-menu {
   display: none;
@@ -205,16 +216,12 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
 }
 
 .nav-menu.nav-open {
-  display: block;
-}
-
-.nav-menu ul {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
   padding: 16px 20px;
-  margin: 0;
 }
 
-.nav-menu ul li a {
+.nav-menu a {
   display: block;
   color: var(--white);
   font-size: 16px;
@@ -225,15 +232,15 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   transition: color 0.2s ease;
 }
 
-.nav-menu ul li:last-child a {
+.nav-menu a:last-child {
   border-bottom: none;
 }
 
-.nav-menu ul li a:hover {
+.nav-menu a:hover {
   color: var(--orange);
 }
 
-/* ≥768px: Show desktop nav, phone; hide menu toggle */
+/* >=768px: Show desktop nav, phone; hide menu toggle */
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
@@ -244,17 +251,11 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
     width: auto;
     background: none;
     align-items: center;
-  }
-
-  .nav-menu ul {
-    display: flex;
     gap: 4px;
     padding: 0;
-    margin: 0;
-    list-style: none;
   }
 
-  .nav-menu ul li a {
+  .nav-menu a {
     color: rgba(255, 255, 255, 0.85);
     font-size: 14px;
     font-weight: 500;
@@ -264,7 +265,7 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
     transition: color 0.2s ease, background-color 0.2s ease;
   }
 
-  .nav-menu ul li a:hover {
+  .nav-menu a:hover {
     color: var(--white);
     background-color: rgba(255, 255, 255, 0.08);
   }
@@ -276,6 +277,7 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
 
 /* ------------------------------------------------------------
    6. Hero Section
+   HTML: .hero > .hero-overlay > .container > h1 + .hero-subtitle + .btn-primary
    ------------------------------------------------------------ */
 .hero {
   position: relative;
@@ -295,13 +297,12 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   z-index: 1;
 }
 
-.hero-content {
+/* HTML uses .hero-overlay (not .hero-content) */
+.hero-overlay {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 60px 0;
 }
 
 .hero h1 {
@@ -313,7 +314,8 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   margin-bottom: 16px;
 }
 
-.hero-sub {
+/* HTML uses .hero-subtitle (not .hero-sub) */
+.hero-subtitle {
   color: var(--white);
   font-size: 18px;
   opacity: 0.9;
@@ -322,24 +324,11 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   line-height: 1.5;
 }
 
-.hero-cta {
-  display: inline-block;
-  background-color: var(--orange);
-  color: var(--white);
+/* Hero CTA uses .btn-primary — make it larger in hero context */
+.hero .btn-primary {
   font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   padding: 16px 32px;
-  border-radius: 8px;
-  text-decoration: none;
   margin-top: 24px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.hero-cta:hover {
-  background-color: var(--orange-hover);
-  transform: translateY(-2px);
 }
 
 @media (min-width: 768px) {
@@ -354,6 +343,8 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
 
 /* ------------------------------------------------------------
    7. Trust Bar
+   HTML: .trust-bar > .container > .trust-item (text directly inside)
+   The .container div IS the flex wrapper.
    ------------------------------------------------------------ */
 .trust-bar {
   background-color: var(--white);
@@ -361,43 +352,22 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.trust-bar-inner {
+.trust-bar .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .trust-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 50%;
   padding: 20px 12px;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--body-text);
-  gap: 6px;
-}
-
-.trust-item .trust-icon {
-  font-size: 28px;
-  line-height: 1;
-}
-
-.trust-item .trust-label {
-  font-size: 13px;
   font-weight: 600;
   color: var(--charcoal);
-}
-
-.trust-item .trust-sub {
-  font-size: 12px;
-  color: #666;
 }
 
 @media (min-width: 768px) {
@@ -533,27 +503,21 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   transform: translateY(-2px);
 }
 
-.service-card .service-icon {
-  font-size: 48px;
-  line-height: 1;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.service-card .service-title {
+/* Service card sub-elements: HTML uses bare h3, p, a */
+.service-card h3 {
   font-size: 18px;
   font-weight: 700;
   color: var(--charcoal);
   margin-bottom: 8px;
 }
 
-.service-card .service-desc {
+.service-card p {
   font-size: 14px;
   color: #666;
   line-height: 1.6;
 }
 
-.service-card .service-link {
+.service-card a {
   display: inline-block;
   margin-top: 16px;
   color: var(--orange);
@@ -563,7 +527,7 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   transition: color 0.2s ease;
 }
 
-.service-card .service-link:hover {
+.service-card a:hover {
   color: var(--orange-hover);
   text-decoration: underline;
 }
@@ -586,11 +550,11 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
 
 /* ------------------------------------------------------------
    10. Service Area
+   HTML uses .area-tags / .area-tag (not .area-pills / .area-pill)
    ------------------------------------------------------------ */
 .service-area {
   background-color: var(--light-gray);
   padding: 60px 0;
-  text-align: center;
 }
 
 .service-area h2 {
@@ -600,21 +564,34 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   margin-bottom: 8px;
 }
 
+.service-area h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.service-area p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--body-text);
+  margin-top: 16px;
+}
+
 .service-area .section-sub {
   font-size: 16px;
   color: #666;
   margin-bottom: 32px;
 }
 
-.area-pills {
+.area-tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 8px;
-  padding: 0 20px;
+  margin-bottom: 24px;
 }
 
-.area-pill {
+.area-tag {
   display: inline-block;
   background-color: var(--white);
   border: 1px solid #ddd;
@@ -626,12 +603,12 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.area-pill:hover {
+.area-tag:hover {
   border-color: var(--orange);
   color: var(--orange);
 }
 
-.area-pill a {
+.area-tag a {
   color: inherit;
   text-decoration: none;
 }
@@ -644,6 +621,9 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
 
 /* ------------------------------------------------------------
    11. FAQ
+   HTML: .faq-section.content-section > .container > h2 + .faq-item*
+   .faq-item > button.faq-question + .faq-answer > p
+   No .faq-list wrapper. No .faq-chevron. No .faq-answer-inner.
    ------------------------------------------------------------ */
 .faq-section {
   background-color: var(--white);
@@ -654,27 +634,15 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   font-size: 28px;
   font-weight: 700;
   color: var(--charcoal);
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.faq-section .section-sub {
-  font-size: 16px;
-  color: #666;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.faq-list {
-  max-width: 800px;
-  margin: 0 auto;
+  margin-bottom: 24px;
 }
 
 .faq-item {
   border-bottom: 1px solid #e5e5e5;
+  max-width: 800px;
 }
 
-.faq-item:first-child {
+.faq-item:first-of-type {
   border-top: 1px solid #e5e5e5;
 }
 
@@ -700,38 +668,13 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   color: var(--orange);
 }
 
-.faq-chevron {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-  color: var(--orange);
-}
-
-.faq-chevron svg {
-  width: 16px;
-  height: 16px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.faq-item.active .faq-chevron {
-  transform: rotate(180deg);
-}
-
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
-.faq-answer-inner {
+.faq-answer p {
   padding-bottom: 20px;
   font-size: 16px;
   color: #555;
@@ -750,6 +693,7 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
 
 /* ------------------------------------------------------------
    12. CTA Band
+   HTML: .cta-band > .container > h2 + p > a + a.btn-primary
    ------------------------------------------------------------ */
 .cta-band {
   background-color: var(--charcoal);
@@ -766,38 +710,28 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   margin: 0 auto;
 }
 
-.cta-band .cta-phone {
-  display: block;
+.cta-band p {
   color: var(--white);
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 20px;
   margin-top: 16px;
+}
+
+.cta-band p a {
+  color: var(--white);
+  font-weight: 700;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.cta-band .cta-phone:hover {
+.cta-band p a:hover {
   color: var(--orange);
 }
 
-.cta-band .cta-btn {
-  display: inline-block;
-  background-color: var(--orange);
-  color: var(--white);
+/* CTA button in the band uses .btn-primary — make it larger */
+.cta-band .btn-primary {
   font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   padding: 16px 40px;
-  border-radius: 8px;
   margin-top: 24px;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.cta-band .cta-btn:hover {
-  background-color: var(--orange-hover);
-  transform: translateY(-2px);
 }
 
 .cta-band .cta-subtext {
@@ -811,34 +745,17 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
     font-size: 32px;
   }
 
-  .cta-band .cta-phone {
-    font-size: 40px;
+  .cta-band p {
+    font-size: 24px;
   }
 }
 
 /* ------------------------------------------------------------
    13. Contact Form
+   HTML: form.contact-form inside .content-section
+   Form fields are in bare <div> wrappers (no .form-group class)
+   Submit button uses .btn-primary
    ------------------------------------------------------------ */
-.contact-section {
-  background-color: var(--light-gray);
-  padding: 60px 0;
-}
-
-.contact-section h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--charcoal);
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.contact-section .section-sub {
-  font-size: 16px;
-  color: #666;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -848,11 +765,11 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
 }
 
-.form-group {
+.contact-form > div {
   margin-bottom: 20px;
 }
 
-.form-group label {
+.contact-form label {
   display: block;
   font-size: 14px;
   font-weight: 700;
@@ -860,9 +777,9 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   margin-bottom: 6px;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
   width: 100%;
   padding: 12px 16px;
   border: 1px solid #ddd;
@@ -876,55 +793,31 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   -webkit-appearance: none;
 }
 
-.form-group textarea {
+.contact-form textarea {
   resize: vertical;
   min-height: 120px;
 }
 
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
   outline: none;
   border-color: var(--orange);
   box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
   color: #aaa;
 }
 
-.form-submit {
+/* Submit button uses .btn-primary — make it full-width in forms */
+.contact-form .btn-primary {
   display: block;
   width: 100%;
   padding: 16px;
-  background-color: var(--orange);
-  color: var(--white);
   font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: var(--font-stack);
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.form-submit:hover {
-  background-color: var(--orange-hover);
-  transform: translateY(-1px);
-}
-
-.form-submit:active {
-  transform: translateY(0);
-}
-
-.form-note {
-  font-size: 13px;
-  color: #888;
   text-align: center;
-  margin-top: 12px;
 }
 
 /* Embedded form wrappers (e.g. JotForm, Gravity Forms) */
@@ -940,6 +833,8 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
 
 /* ------------------------------------------------------------
    14. Footer
+   HTML: .site-footer > .container > .footer-grid > .footer-col*3
+   .footer-bottom > p + p (bare p tags, no special classes)
    ------------------------------------------------------------ */
 .site-footer {
   background-color: var(--navy);
@@ -969,6 +864,18 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   line-height: 1.7;
 }
 
+.footer-col p a {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col p a:hover {
+  color: var(--orange);
+}
+
 .footer-col ul {
   list-style: none;
   padding: 0;
@@ -977,6 +884,8 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
 
 .footer-col ul li {
   margin-bottom: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-col ul li a {
@@ -991,19 +900,6 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   opacity: 1;
 }
 
-.footer-col .footer-phone {
-  color: var(--white);
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.footer-col .footer-phone:hover {
-  color: var(--orange);
-}
-
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
@@ -1015,27 +911,9 @@ body.nav-open .menu-toggle .bar:nth-child(3) {
   text-align: center;
 }
 
-.footer-copyright {
+.footer-bottom p {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-bottom-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.footer-bottom-links a {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer-bottom-links a:hover {
-  color: var(--orange);
 }
 
 @media (min-width: 768px) {
@@ -1147,6 +1025,8 @@ body {
 
 /* ------------------------------------------------------------
    17. Breadcrumb
+   HTML: nav.breadcrumb > .container > span (home page)
+   or nav.breadcrumb > .container > a + span (inner pages)
    ------------------------------------------------------------ */
 .breadcrumb {
   font-size: 14px;
@@ -1154,45 +1034,18 @@ body {
   padding: 12px 0;
 }
 
-.breadcrumb-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.breadcrumb-list li {
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumb-list li::after {
-  content: '>';
-  margin: 0 8px;
-  color: #bbb;
-  font-size: 12px;
-}
-
-.breadcrumb-list li:last-child::after {
-  content: '';
-  margin: 0;
-}
-
-.breadcrumb-list li a {
+.breadcrumb a {
   color: var(--orange);
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
-.breadcrumb-list li a:hover {
+.breadcrumb a:hover {
   opacity: 0.8;
   text-decoration: underline;
 }
 
-.breadcrumb-list li span[aria-current="page"] {
+.breadcrumb span {
   color: #666;
 }
 
