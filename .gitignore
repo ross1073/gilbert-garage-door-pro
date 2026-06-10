@@ -3,3 +3,5 @@ output/
 
 # Local Netlify folder
 .netlify
+__pycache__/
+*.log
