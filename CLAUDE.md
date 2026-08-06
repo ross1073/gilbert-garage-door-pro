@@ -41,3 +41,14 @@ to a local business.
 - Do not keyword stuff — write naturally for humans
 - Do not create thin pages — each page should have substantial, useful content
 - Do not use frameworks (React, etc.) — keep it static HTML for speed
+
+
+<!-- BRAIN-MANIFEST-START -->
+## Brain library manifest
+
+Generated 2026-08-06 by ~/projects/brain/scripts/manifest.py. Do not hand-edit — this block is regenerated in place. Read these with `/load`.
+
+_No library files currently match gilbert_az_garage_door_repair by entity._
+
+Library root: ~/projects/brain/
+<!-- BRAIN-MANIFEST-END -->
