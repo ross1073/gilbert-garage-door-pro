@@ -46,7 +46,7 @@ to a local business.
 <!-- BRAIN-MANIFEST-START -->
 ## Brain library manifest
 
-Generated 2026-08-06 by ~/projects/brain/scripts/manifest.py. Do not hand-edit — this block is regenerated in place. Read these with `/load`.
+Generated 2026-08-13 by ~/projects/brain/scripts/manifest.py. Do not hand-edit — this block is regenerated in place. Read these with `/load`.
 
 _No library files currently match gilbert_az_garage_door_repair by entity._
 
